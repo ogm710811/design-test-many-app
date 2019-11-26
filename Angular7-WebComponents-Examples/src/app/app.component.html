@@ -1,0 +1,113 @@
+<app-dialog-target></app-dialog-target>
+<div class="container-fluid p-0">
+  <div class="row no-gutters">
+    <div
+      class="col blue lighten-5 py-4 text-center font-weight-bold text-primary"
+    >
+      {{ title | uppercase }}
+    </div>
+  </div>
+  <div class="row no-gutters p-0">
+    <div class="col column__menu--width column__menu--height blue lighten-5">
+      <links>
+        <ul class="pl-0 list-unstyled">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/" routerLinkActive="active">
+              <span class="text-capitalize">Home</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/dragdrop"
+              routerLinkActive="active"
+            >
+              <span class="text-capitalize">Drag & Drop</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/toolmenu" routerLinkActive="active">
+              <span class="text-capitalize">Tooltip Menu</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/datepicker" routerLinkActive="active">
+              <span class="text-capitalize">Date Picker</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/dialog" routerLinkActive="active">
+              <span class="text-capitalize">Dialog</span>
+            </a>
+          </li>
+          <!--    <li class="nav-item">
+            	<a class="nav-link" routerLink="/Logging" routerLinkActive="active">
+            		<span class="text-capitalize">Logging</span>
+            	</a>
+            </li>
+            <li class="nav-item">
+            	<a class="nav-link" routerLink="/Noty" routerLinkActive="active">
+            		<span class="text-capitalize">Noty</span>
+            	</a>
+            </li>
+            <li class="nav-item">
+            	<a class="nav-link" routerLink="/Prompt" routerLinkActive="active">
+            		<span class="text-capitalize">Prompt</span>
+            	</a>
+            </li>
+            <li class="nav-item">
+            	<a class="nav-link" routerLink="/Excel" routerLinkActive="active">
+            		<span class="text-capitalize">Excel</span>
+            	</a>
+            </li>
+            <li class="nav-item">
+            	<a class="nav-link" routerLink="/TemplateForm" routerLinkActive="active">
+            		<span class="text-capitalize">Template Form</span>
+            	</a>
+            </li>
+            <li class="nav-item">
+            	<a class="nav-link" routerLink="/ReactiveForm" routerLinkActive="active">
+            		<span class="text-capitalize">Reactive Form</span>
+            	</a>
+            </li>
+            <li class="nav-item">
+            	<a class="nav-link" routerLink="/FlowUpload" routerLinkActive="active">
+            		<span class="text-capitalize">Flow Upload</span>
+            	</a>
+            </li>
+            <li class="nav-item">
+            	<a class="nav-link" routerLink="/SelectDialog" routerLinkActive="active">
+            		<span class="text-capitalize">Select Dialog</span>
+            	</a>
+            </li>
+            <li class="nav-item">
+            	<a class="nav-link" routerLink="/GridEditor" routerLinkActive="active">
+            		<span class="text-capitalize">Grid Editor</span>
+            	</a>
+            </li>
+            <li class="nav-item">
+            	<a class="nav-link" routerLink="/codeEditor" routerLinkActive="active">
+            		<span class="text-capitalize">Code Editor</span>
+            	</a>
+            </li>
+            <li class="nav-item">
+            	<a class="nav-link" routerLink="/GridEnterpriseModel" routerLinkActive="active">
+            		<span class="text-capitalize">Grid Enterprise Row Model</span>
+            	</a>
+            </li>
+          -->
+        </ul>
+      </links>
+    </div>
+    <div class="col">
+      <div class="row no-gutters">
+        <div class="col column__menu--height">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row no-gutters">
+    <div class="col"><app-footer></app-footer></div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<!-- Button with Tooltip -->
+<ng-container *ngIf="tooltipSettings">
+	<app-tooltip-menu [tooltipMenuParams]="tooltipSettings">
+		<ng-container *ngTemplateOutlet="button"></ng-container>
+	</app-tooltip-menu>
+</ng-container>
+<!-- Button without Tooltip -->
+<ng-container *ngIf="!tooltipSettings">
+	<ng-container *ngTemplateOutlet="button"></ng-container>
+</ng-container>
+<!-- Basic Button Template -->
+<ng-template #button>
+	<button mdbBtn [disabled]="isDisabled" [type]="buttonSettings.type" [color]="color" [ngClass]="cssClasses" (click)="clickHandler($event);" mdbWavesEffect>
+		<i *ngIf="showIconBefore" class="fa icon--font-size mr-2" [ngClass]="buttonSettings.iconClasses" aria-hidden="true"></i>
+		<span>{{buttonSettings.text}}</span>
+		<i *ngIf="showIconAfter" class="fa icon--font-size ml-2" [ngClass]="buttonSettings.iconClasses" aria-hidden="true"></i>
+	</button>
+</ng-template>
+

@@ -1,0 +1,59 @@
+<div class="container-fluid">
+	<div class="row no-gutters mt-3">
+		<div class="col">
+			<div class="card">
+				<div class="row no-gutters border border-secondary border-top-0 border-right-0 border-left-0 app-toolmenu--height primary-color-dark">
+					<div class="col  text-center p-0 ">
+						<div class="row h-100 align-items-center no-gutters ">
+							<div class="col text-center">
+								<app-tooltip-menu [toolMenuParams]="infoToolMenu">
+                    <button type="button" mdbBtn class="bwaves-light primary-color px-2 py-1" mdbWavesEffect>
+                      <span class="small">Info Tooltip</span>
+                    </button>
+                </app-tooltip-menu>
+							</div>
+						</div>
+          </div>
+          <div class="col  text-center p-0 ">
+						<div class="row h-100 align-items-center no-gutters ">
+							<div class="col text-center">
+								<app-tooltip-menu [toolMenuParams]="actionTooltipMenuSettings"></app-tooltip-menu>
+							</div>
+						</div>
+          </div>
+          <div class="col  text-center p-0 ">
+						<div class="row h-100 align-items-center no-gutters ">
+							<div class="col text-center">
+								<app-tooltip-menu [toolMenuParams]="helpTooltipMenu">
+                    <a href="#" class="white-text p-0 m-0">
+                        <span class="fa-stack fa-lg white-text">
+                          <i class="fa fa-question-circle-o fa-stack-1x fa-lg" aria-hidden="true"></i>
+                        </span>
+                      </a>
+                </app-tooltip-menu>
+							</div>
+						</div>
+          </div>
+          <div class="col  text-center p-0 ">
+						<div class="row h-100 align-items-center no-gutters ">
+							<div class="col text-center">
+								<app-tooltip-menu [toolMenuParams]="navigationTooltipMenuSettings"></app-tooltip-menu>
+							</div>
+						</div>
+          </div>
+          <div class="col  text-center p-0 ">
+						<div class="row h-100 align-items-center no-gutters ">
+							<div class="col text-center">
+								<i class="fa fa-tags fa-2x white-text align-middle" aria-hidden="true"></i>
+								<!-- <img class="img-fluid" src="../bootstrap/img/custom/tagm_logo.svg" /> -->
+								<!-- <bt-tooltip-menu class="d-inline-block badge__beta-label--width" [tooltipMenuParams]="betaTooltipMenuSettings">
+									<span class="badge blue">Beta</span>
+								</bt-tooltip-menu> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,35 @@
+.app__dialog--lg {
+	max-width: 80% !important;
+	width: 80% !important;
+	min-width: 1024px !important;
+}
+
+.app__dialog--sm {
+	max-width: 45% !important;
+	width: 45% !important;
+	min-width: 430px !important;
+}
+
+.app__dialog--center-md {
+	max-width: 100% !important;
+	width: 610px !important;
+	height: 400px !important;
+}
+
+.column__close {
+	max-width: 32px;
+}
+
+.column__ellipsis {
+	max-width: 77px;
+}
+
+.column__title {
+	top: 11px;
+	left: 40px;
+}
+
+.header--min-height {
+	min-height: 52px;
+	height: 52px;
+}

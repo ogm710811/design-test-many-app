@@ -1,0 +1,50 @@
+<div mdbModal #modal class="modal" [ngClass]="modalClasses" (click)="backdropClick($event)">
+  <div #modalDialog class="modal-dialog" role="document" [ngClass]="dialogClasses">
+    <div class="modal-content" [ngClass]="contentClasses">
+      <div class="modal-header p-2 header--min-height" [ngClass]="headerClasses">
+        <div class="container-fluid p-0 h-100">
+          <div class="row align-items-center no-gutters h-100">
+            <div class="col mr-2 column__close">
+              <a *ngIf="!disableClose" class="cursor-pointer" data-dismiss="modal" aria-label="Close" (click)="closeButtonClick($event)">
+                <i class="fa fa-times fa-lg p-2" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div *ngIf="headerButtonSettings" class="col text-right">
+              <ng-container *ngFor="let button of headerButtonSettings">
+                <app-custom-button class="px-2" [buttonSettings]="button"></app-custom-button>
+              </ng-container>
+            </div>
+
+            <div *ngIf="tooltipSettings" class="col mx-2 column__ellipsis">
+              <app-tooltip-menu [toolMenuParams]="tooltipSettings"></app-tooltip-menu>
+            </div>
+
+            <div class="position-absolute column__title">
+              <h5 class="modal-title d-inline-block pl-1">
+                {{ header }}
+                <!--
+                  <i *ngIf="helpDocuments.hasHelpIcon" class="fa fa-question-circle-o ml-2 cursor-pointer" aria-hidden="true" (click)="displayPdfViewer()"></i>
+                -->
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ng-content select="app-dialog-body"></ng-content>
+      <ng-content select="app-dialog-footer"></ng-content>
+      <!--
+        <div *ngIf="footerButtonSettings" class="modal-footer d-block p-2" [ngClass]="footerClasses">
+        	<div class="container-fluid p-0">
+        		<div class="row align-items-center no-gutters">
+        			<div class="col text-left">
+        				<ng-container *ngFor="let button of footerButtonSettings">
+        					<bt-basic-button [buttonSettings]="button"></bt-basic-button>
+        				</ng-container>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+      -->
+    </div>
+  </div>
+</div>

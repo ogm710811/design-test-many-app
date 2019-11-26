@@ -1,0 +1,48 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jumbotron px-3">
+        <h3 class="display-4">Fox Select Dropdown Component</h3>
+        <p class="lead">This menu is implemented using the following Angular library: <a href="https://ng-select.github.io/ng-select#/data-sources">ng-select</a></p>
+        <hr class="my-4">
+        <div class="row">
+          <div class="col">
+            <div class="alert alert-success" role="alert">
+              <h4 class="alert-heading">Default Fox Multiselect</h4>
+              <hr>
+              <pre>{{default | json}}</pre>
+            </div>
+            <fox-select-dropdown [selectDropdownDataSource]="selectDropdownDataSource" [selectDropdownParams]=default (selectedItemsEmitter)=onBasicSelectedItemsSelectAll($event)></fox-select-dropdown>
+            <div class="alert alert-success mt-3" role="alert">
+              <h5 class="alert-heading">Selected Items</h5>
+              <hr>
+              <ng-container *ngIf="basicSelectedItemsSelectAll.length">
+                <ul class="list-group" *ngFor="let item of basicSelectedItemsSelectAll">
+                  <li class="list-group-item">{{item.id}} :: {{item.name}}</li>
+                </ul>
+              </ng-container>
+            </div>
+          </div>
+          <div class="col">
+            <div class="alert alert-success" role="alert">
+              <h4 class="alert-heading">Fox Multiselect All</h4>
+              <hr>
+              <pre>{{selectAll | json}}</pre>
+            </div>
+            <fox-select-dropdown [selectDropdownDataSource]="selectDropdownDataSource" [selectDropdownParams]=selectAll (selectedItemsEmitter)=onSelectedItemsSelectAll($event)></fox-select-dropdown>
+            <div class="alert alert-success mt-3" role="alert">
+              <h5 class="alert-heading">Selected Items</h5>
+              <hr>
+              <ng-container *ngIf="selectedItemsSelectAll.length">
+                <ul class="list-group" *ngFor="let item of selectedItemsSelectAll">
+                  <li class="list-group-item">{{item.id}} :: {{item.name}}</li>
+                </ul>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

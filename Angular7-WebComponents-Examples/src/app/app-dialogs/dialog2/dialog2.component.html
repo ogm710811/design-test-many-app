@@ -1,0 +1,63 @@
+<form>
+  <app-dialog-right-lg
+    header="Dialog 2"
+    [headerButtonSettings]="buttonSettings"
+  >
+    <app-dialog-body>
+      <div class="row">
+        <div class="col">
+          <div class="alert alert-info" role="alert">
+            Dialog 2 Level: {{ formData.level }}
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid p-0">
+        <app-anchored-card>
+          <div class="col align-self-center">
+            <mat-form-field class="d-block">
+              <input
+                matInput
+                #input
+                maxlength="10"
+                placeholder="Enter some input"
+              />
+              <mat-hint align="end">{{ input.value?.length || 0 }}/10</mat-hint>
+            </mat-form-field>
+          </div>
+        </app-anchored-card>
+        <app-anchored-card>
+          <div class="col align-self-center">
+            <mat-form-field class="d-block">
+              <textarea matInput placeholder="Textarea"></textarea>
+            </mat-form-field>
+          </div>
+        </app-anchored-card>
+        <app-anchored-card>
+          <div class="col align-self-center">
+            <mat-form-field class="d-block">
+              <select
+                matNativeControl
+                placeholder="Favorite food"
+                [(ngModel)]="selectedValue"
+                name="food"
+              >
+                <option value="" disabled selected></option>
+                <option *ngFor="let food of foods" [value]="food.value">
+                  {{ food.viewValue }}
+                </option>
+              </select>
+              <mat-hint>Select your favorite food</mat-hint>
+              <!-- <mat-label>Food</mat-label> -->
+            </mat-form-field>
+          </div>
+        </app-anchored-card>
+        <hr />
+        <div class="row no-gutters">
+          <div class="col align-self-center">
+            <pre>{{ selectedValue }}</pre>
+          </div>
+        </div>
+      </div>
+    </app-dialog-body>
+  </app-dialog-right-lg>
+</form>

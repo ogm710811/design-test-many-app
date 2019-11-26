@@ -1,0 +1,8 @@
+<div class="clearfix">
+  <ng-container *ngIf="currentTemplate(datePickerTemplate.singledatepicker)">
+      <input type="text" placeholder="Datepicker" class="form-control" bsDatepicker>
+  </ng-container>
+  <ng-container *ngIf="currentTemplate(datePickerTemplate.rangedatepicker)">
+      <input type="text" placeholder="Daterangepicker" class="form-control" bsDaterangepicker>
+  </ng-container>
+</div>
